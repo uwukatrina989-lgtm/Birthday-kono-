@@ -1,0 +1,89 @@
+<html lang="ar"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>عيد ميلاد سعيد، kono 🎉</title>
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--accent:#ff6b6b;--text:#e6edf3}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;direction:rtl;background:linear-gradient(180deg,#071129 0%, #0f172a 100%);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{width:100%;max-width:900px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.015));border-radius:18px;box-shadow:0 10px 30px rgba(2,6,23,0.6);overflow:hidden;display:grid;grid-template-columns:1fr 420px;gap:0}
+    @media (max-width:820px){.card{grid-template-columns:1fr} .image{min-height:260px}}
+    .content{padding:34px}
+    h1{margin:0 0 8px;font-size:28px;color:var(--accent)}
+    p.lead{margin:0 0 18px;font-size:18px;line-height:1.4;color: #dbe9ff}
+    .message{background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:12px;margin-top:14px;font-size:16px}
+    .actions{margin-top:18px;display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#ff9a6b);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+    .image{background:linear-gradient(180deg,rgba(0,0,0,0.15),transparent);display:flex;align-items:center;justify-content:center;padding:18px}
+    .image img{width:100%;height:100%;object-fit:cover;border-left:8px solid rgba(255,255,255,0.03)}
+    .footer{font-size:13px;color:#9fb0d6;margin-top:12px}
+    /* simple confetti animation */
+    .confetti{position:fixed;left:0;right:0;top:0;bottom:0;pointer-events:none;overflow:hidden}
+    .confetti i{position:absolute;width:10px;height:14px;border-radius:2px;opacity:0;animation:fall 4s linear infinite}
+    @keyframes fall{0%{transform:translateY(-10vh) rotate(0) ;opacity:1}100%{transform:translateY(110vh) rotate(540deg);opacity:0}}
+  </style>
+</head>
+<body contenteditable="false">
+  <div class="card" role="region" aria-label="رسالة عيد ميلاد">
+    <div class="content">
+      <h1><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">عيد ميلاد سعيد يا </font></font><span style="text-transform:capitalize"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">كونو</font></font></span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> ! 🎂</font></font></h1>
+      <p class="lead"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">يوم يومك — يوم نحتفل بوجودك، بابتسامتك، وتحديد الحلوى اللي تجيبها للحياة.</font></font></p>
+
+      <div class="message" aria-live="polite">
+        <p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">عزيزي </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">kono</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> ,</font></font></p>
+        <p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">أتمنى لك سنة جديدة مليئة بالفرح، النجاح، والأوقات اللي تسعد قلبك. خلي كل يوم جديد يبدأ بابتسامة صغيرة ويكبر معك لذكريات كبيرة.</font></font></p>
+        <p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">كل سنة وأنت بألف، ومعا كل الحب والدعاء ✨</font></font></p>
+        <p class="footer"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">— من قلب مُحب</font></font></p>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" onclick="downloadCard()"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">تحميل البطاقة</font></font></button>
+        <button class="btn ghost" onclick="share()"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">مشاركة</font></font></button>
+      </div>
+    </div>
+
+    <div class="image" aria-hidden="false">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="طبقة وطبقة عيد ميلاد" loading="lazy">
+    </div>
+  </div>
+
+  <div class="confetti" id="confetti"><i style="left: 25.028842%; background: rgb(255, 107, 107); animation-delay: 0.799571s; transform: rotate(158.054699deg); opacity: 0.120996;"></i><i style="left: 12.048998%; background: rgb(255, 209, 102); animation-delay: 2.353076s; transform: rotate(296.338386deg); opacity: 0.374081;"></i><i style="left: 43.985716%; background: rgb(107, 242, 198); animation-delay: 2.656257s; transform: rotate(168.416157deg); opacity: 0.530683;"></i><i style="left: 2.433924%; background: rgb(122, 179, 255); animation-delay: 1.198617s; transform: rotate(262.849142deg); opacity: 0.673474;"></i><i style="left: 94.91765%; background: rgb(194, 139, 255); animation-delay: 0.349902s; transform: rotate(321.129766deg); opacity: 0.312079;"></i><i style="left: 29.871756%; background: rgb(255, 107, 107); animation-delay: 2.364997s; transform: rotate(212.861624deg); opacity: 0.771215;"></i><i style="left: 50.370936%; background: rgb(255, 209, 102); animation-delay: 0.901568s; transform: rotate(269.934968deg); opacity: 0.74262;"></i><i style="left: 42.82982%; background: rgb(107, 242, 198); animation-delay: 1.793595s; transform: rotate(301.616486deg); opacity: 0.887606;"></i><i style="left: 82.689169%; background: rgb(122, 179, 255); animation-delay: 2.792478s; transform: rotate(83.043151deg); opacity: 0.367599;"></i><i style="left: 8.40684%; background: rgb(194, 139, 255); animation-delay: 0.670862s; transform: rotate(127.84deg); opacity: 0.666859;"></i><i style="left: 54.033798%; background: rgb(255, 107, 107); animation-delay: 0.400962s; transform: rotate(66.085656deg); opacity: 0.032264;"></i><i style="left: 20.185097%; background: rgb(255, 209, 102); animation-delay: 0.677897s; transform: rotate(236.547727deg); opacity: 0.158287;"></i><i style="left: 92.928038%; background: rgb(107, 242, 198); animation-delay: 1.399229s; transform: rotate(163.37939deg); opacity: 0.033226;"></i><i style="left: 8.683195%; background: rgb(122, 179, 255); animation-delay: 1.793351s; transform: rotate(39.845922deg); opacity: 0.608741;"></i><i style="left: 31.740269%; background: rgb(194, 139, 255); animation-delay: 2.638527s; transform: rotate(295.433573deg); opacity: 0.415711;"></i><i style="left: 39.036227%; background: rgb(255, 107, 107); animation-delay: 1.036819s; transform: rotate(348.086996deg); opacity: 0.02008;"></i><i style="left: 93.056246%; background: rgb(255, 209, 102); animation-delay: 0.754514s; transform: rotate(4.057887deg); opacity: 0.336689;"></i><i style="left: 98.121463%; background: rgb(107, 242, 198); animation-delay: 2.190987s; transform: rotate(323.008114deg); opacity: 0.167294;"></i><i style="left: 47.383898%; background: rgb(122, 179, 255); animation-delay: 1.216515s; transform: rotate(128.34865deg); opacity: 0.534305;"></i><i style="left: 67.287957%; background: rgb(194, 139, 255); animation-delay: 0.089202s; transform: rotate(8.776226deg); opacity: 0.882123;"></i><i style="left: 24.805767%; background: rgb(255, 107, 107); animation-delay: 1.101859s; transform: rotate(345.004098deg); opacity: 0.548771;"></i><i style="left: 28.728477%; background: rgb(255, 209, 102); animation-delay: 2.868351s; transform: rotate(178.62588deg); opacity: 0.405282;"></i><i style="left: 34.603111%; background: rgb(107, 242, 198); animation-delay: 0.477166s; transform: rotate(72.810614deg); opacity: 0.034927;"></i><i style="left: 63.110235%; background: rgb(122, 179, 255); animation-delay: 1.748225s; transform: rotate(46.516404deg); opacity: 0.550226;"></i><i style="left: 52.452734%; background: rgb(194, 139, 255); animation-delay: 1.193647s; transform: rotate(157.512707deg); opacity: 0.302228;"></i><i style="left: 7.626324%; background: rgb(255, 107, 107); animation-delay: 1.068823s; transform: rotate(276.491114deg); opacity: 0.686149;"></i><i style="left: 25.160113%; background: rgb(255, 209, 102); animation-delay: 2.904253s; transform: rotate(353.279233deg); opacity: 0.132324;"></i><i style="left: 21.555921%; background: rgb(107, 242, 198); animation-delay: 0.51765s; transform: rotate(135.028858deg); opacity: 0.25403;"></i></div>
+
+  <script>
+    // generate simple confetti pieces
+    const colors = ['#ff6b6b','#ffd166','#6bf2c6','#7ab3ff','#c28bff']
+    const confettiEl = document.getElementById('confetti')
+    for(let i=0;i<28;i++){
+      const el = document.createElement('i')
+      el.style.left = Math.random()*100+'%'
+      el.style.background = colors[i%colors.length]
+      el.style.animationDelay = (Math.random()*3)+'s'
+      el.style.transform = 'rotate('+ (Math.random()*360) +'deg)'
+      el.style.opacity = Math.random()*0.9
+      confettiEl.appendChild(el)
+    }
+
+    function downloadCard(){
+      // create a simple PNG snapshot using HTML2Canvas approach is not available offline here.
+      // Instead we export the inner HTML as a .html file for the user to download locally.
+      const blob = new Blob([document.documentElement.outerHTML],{type:'text/html'})
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url; a.download = 'happy-birthday-kono.html'
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url)
+    }
+
+    function share(){
+      const text = `عيد ميلاد سعيد يا kono! 🎉`;
+      if(navigator.share){
+        navigator.share({title: 'عيد ميلاد سعيد', text})
+        .catch(()=>{})
+      } else {
+        prompt('انسخ الرسالة وشاركها:', text)
+      }
+    }
+  </script>
+
+</body></html>
